@@ -1,0 +1,161 @@
+﻿<Window x:Class="MVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVM"
+        mc:Ignorable="d"
+        Title="Window1" Height="{x:Static SystemParameters.PrimaryScreenHeight}" Width="{x:Static SystemParameters.PrimaryScreenWidth}" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                <GradientStop Color="#764fba" Offset="0.1"></GradientStop>
+                <GradientStop Color="#5486cb"  Offset="1.0"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Height="650" Width="500" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Height="70">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#242156" Opacity="0.8"></SolidColorBrush>
+                </StackPanel.Background>
+                <Label Content="REGISTRATION" Margin="0,10,0,0">
+                    <Label.Style>
+                        <Style>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Center"></Setter>
+                            <Setter Property="TextBlock.VerticalAlignment" Value="Center"></Setter>
+                            <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="30"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </Label.Style>
+                </Label>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Height="550">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#242156" Opacity="0.5"></SolidColorBrush>
+                </StackPanel.Background>
+                <StackPanel  Margin="30,20,0,0" >
+                    <StackPanel.Resources>
+                        <Style TargetType="Label">
+                            <Setter  Property="TextBlock.Foreground" Value="White"></Setter>
+                            <Setter  Property="TextBlock.FontSize" Value="18"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="TextBlock.Width" Value="400"></Setter>
+                            <Setter Property="TextBlock.Height" Value="35"></Setter>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Center"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="18"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label Content="Name"  Margin="30,0,0,0"></Label>
+                    <TextBox Margin="0,10,0,0" Text="{Binding Name}"></TextBox>
+                </StackPanel>
+                <StackPanel  Margin="30,10,0,0" >
+                    <StackPanel.Resources>
+                        <Style TargetType="Label">
+                            <Setter  Property="TextBlock.Foreground" Value="White"></Setter>
+                            <Setter  Property="TextBlock.FontSize" Value="18"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="TextBlock.Width" Value="400"></Setter>
+                            <Setter Property="TextBlock.Height" Value="35"></Setter>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Center"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="18"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label Content="User ID"  Margin="30,0,0,0"></Label>
+                    <TextBox Margin="0,10,0,0" Text="{Binding UserId}"></TextBox>
+                </StackPanel>
+
+                <StackPanel  Margin="30,10,0,0" >
+                    <StackPanel.Resources>
+                        <Style TargetType="Label">
+                            <Setter  Property="TextBlock.Foreground" Value="White"></Setter>
+                            <Setter  Property="TextBlock.FontSize" Value="18"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="TextBlock.Width" Value="400"></Setter>
+                            <Setter Property="TextBlock.Height" Value="35"></Setter>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Center"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="18"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label Content="Email"  Margin="30,0,0,0"></Label>
+                    <TextBox Margin="0,10,0,0" Text="{Binding Mail}"></TextBox>
+                </StackPanel>
+                <StackPanel  Margin="30,10,0,0" >
+                    <StackPanel.Resources>
+                        <Style TargetType="Label">
+                            <Setter  Property="TextBlock.Foreground" Value="White"></Setter>
+                            <Setter  Property="TextBlock.FontSize" Value="18"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="TextBlock.Width" Value="400"></Setter>
+                            <Setter Property="TextBlock.Height" Value="35"></Setter>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Center"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="18"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label Content="Phone Number"  Margin="30,0,0,0"></Label>
+                    <TextBox Margin="0,10,0,0" Text="{Binding Phone}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="UPDATE" Margin="60,50,0,0" Command="{Binding UpdateButton}"  Height="35" Background="Orange">
+                    <Button.Style>
+                        <Style>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Right"></Setter>
+                            <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                            <Setter Property="TextBlock.Width" Value="120"></Setter>
+                            <Setter Property="TextBlock.Height" Value="30"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="16"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Content="REGISTER" Margin="20,50,0,0"  Height="35" Command="{Binding RegisterButton}" Background="#60b02d">
+                    <Button.Style>
+                        <Style>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Right"></Setter>
+                            <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                            <Setter Property="TextBlock.Width" Value="120"></Setter>
+                            <Setter Property="TextBlock.Height" Value="30"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="16"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Content="GET" Margin="20,50,0,0" Command="{Binding GetButton}"  Height="35" Background="Red">
+                    <Button.Style>
+                        <Style>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Right"></Setter>
+                            <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                            <Setter Property="TextBlock.Width" Value="120"></Setter>
+                            <Setter Property="TextBlock.Height" Value="30"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="16"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
